@@ -1,4 +1,3 @@
-import React from 'react'
 import './myHome.css'
 import MyHomeSlider from '../../components/myHomeSliderSec/MyHomeSlider'
 import MyHomeTextInfo from '../../components/myHomeTextInfoSec/MyHomeTextInfo'
@@ -9,7 +8,7 @@ import MyHomeOurMission from '../../components/myHomeOurMissionSec/MyHomeOurMiss
 import MyHomeIndustries from '../../components/myHomeIndustriesSec/MyHomeIndustries'
 import MyHomeInsights from '../../components/myHomeInsightsSec/MyHomeInsights'
 import MyHomeJobs from '../../components/myHomeJobsSec/MyHomeJobs'
-import MyNewsLetter from '../../components/myNewsLetterSec/MyNewsLetter'
+// import MyNewsLetter from '../../components/myNewsLetterSec/MyNewsLetter'
 import sliderImg1 from '../../assets/slider-bg/prx-img-07.png'
 import sliderImg2 from '../../assets/slider-bg/singleCompanyQuote.png'
 
@@ -25,7 +24,6 @@ export default function MyHome() {
             <MyHomeIndustries />
             <MyHomeInsights />
             <MyHomeJobs />
-            <MyNewsLetter />
         </>
     )
 }

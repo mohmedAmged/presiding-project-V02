@@ -1,4 +1,3 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -8,6 +7,7 @@ import Autoplay from "../../../node_modules/swiper/modules/autoplay.mjs";
 import './myHomeSlider.css';
 
 import { Navigation } from "swiper/modules";
+// eslint-disable-next-line react/prop-types
 export default function MyHomeSlider({ heading, title, overLayColor, showBtn, sliderImg1, sliderImg2 }) {
     return (
         <div className="slider__handler">

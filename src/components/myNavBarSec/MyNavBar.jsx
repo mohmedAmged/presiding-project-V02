@@ -67,19 +67,9 @@ export default function MyNavBar({scrollToggle}) {
                                 }}
                                 aria-label="Close"
                                 className={`nav-link nav__link__style`}
-                                to={`/blogs`}
+                                to={`/insights`}
                             >
-                                Blogs
-                            </NavLink>
-                            <NavLink
-                                onClick={() => {
-                                    scrollToTop();
-                                }}
-                                aria-label="Close"
-                                className={`nav-link nav__link__style`}
-                                to={`/product`}
-                            >
-                                product
+                                Insights
                             </NavLink>
                             <NavLink
                                 onClick={() => {
@@ -165,8 +155,8 @@ export default function MyNavBar({scrollToggle}) {
                                     }}
                                     aria-label="Close"
                                     className={`nav-link nav__link__style`}
-                                    to={`/blog`}>
-                                    Blog
+                                    to={`/insights`}>
+                                    Insights
                                 </NavLink>
                                 <NavLink
                                     onClick={() => {

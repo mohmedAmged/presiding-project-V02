@@ -1,4 +1,3 @@
-import React from 'react'
 import './myNewsLetter.css'
 export default function MyNewsLetter() {
     return (
