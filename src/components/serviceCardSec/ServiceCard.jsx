@@ -1,6 +1,6 @@
-import { NavLink } from 'react-router-dom'
-import styles from './serviceCard.module.css'
-// eslint-disable-next-line react/prop-types
+import { NavLink } from 'react-router-dom';
+import styles from './serviceCard.module.css';
+import PropTypes from 'prop-types';
 export default function ServiceCard({ cardImg, cardTitle, cardDesc, subLinks, subServLink }) {
     return (
         <div className={`${styles.serviceCard__handler}`}>
@@ -14,7 +14,6 @@ export default function ServiceCard({ cardImg, cardTitle, cardDesc, subLinks, su
                 </p>
                 <ul className={`${styles.cardSubLinks}`}>
                     {
-                        // eslint-disable-next-line react/prop-types
                         subLinks?.map((el) => (
                             <li className={`${styles.SubLink}`} key={el.subServId}>
                                 <NavLink to={subServLink} className={'nav-link'}>
@@ -28,5 +27,12 @@ export default function ServiceCard({ cardImg, cardTitle, cardDesc, subLinks, su
             </div>
 
         </div>
-    )
-}
+    );
+};
+ServiceCard.propTypes = {
+    cardImg: PropTypes.string.isRequired, 
+    cardTitle: PropTypes.string.isRequired, 
+    cardDesc: PropTypes.string.isRequired, 
+    subLinks: PropTypes.string.isRequired, 
+    subServLink: PropTypes.string.isRequired,
+};

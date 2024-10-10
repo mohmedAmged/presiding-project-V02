@@ -5,7 +5,8 @@ import Offcanvas from 'react-bootstrap/Offcanvas';
 import { NavLink } from 'react-router-dom';
 import { scrollToTop } from '../../functions/scrollToTop';
 import main_logo from '../../assets/logos/presiding-nav-logo.png'
-// eslint-disable-next-line react/prop-types
+import PropTypes from 'prop-types';
+
 export default function MyNavBar({scrollToggle}) {
     const [showOffcanvas, setShowOffcanvas] = useState(false);
 
@@ -190,5 +191,9 @@ export default function MyNavBar({scrollToggle}) {
                 </Container>
             </Navbar>
         </>
-    )
-}
+    );
+};
+
+MyNavBar.propTypes = {
+    scrollToggle: PropTypes.bool.isRequired,
+};

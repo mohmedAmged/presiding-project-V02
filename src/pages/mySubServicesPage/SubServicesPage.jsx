@@ -7,5 +7,5 @@ export default function SubServicesPage() {
             <MyHomeSlider heading={'Policies & Procedures'} title={''} overLayColor={'#00000057'} showBtn={false} sliderImg1={sliderImg1} sliderImg2={sliderImg1} />
             <MySubServices />
         </>
-    )
-}
+    );
+};

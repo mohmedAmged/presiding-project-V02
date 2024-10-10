@@ -1,5 +1,6 @@
 .header_ofSec{
     position: relative;
+    text-align: center;
 }
 .header_ofSec p{
     font-size: 16px;
@@ -19,6 +20,5 @@
     .header_ofSec h3{
         font-size: 22px;
         width: 80%;
-
     }
 }

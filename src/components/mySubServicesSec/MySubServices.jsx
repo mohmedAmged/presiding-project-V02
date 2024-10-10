@@ -27,5 +27,5 @@ export default function MySubServices() {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};

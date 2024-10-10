@@ -7,7 +7,7 @@ import Autoplay from "../../../node_modules/swiper/modules/autoplay.mjs";
 import './myHomeSlider.css';
 
 import { Navigation } from "swiper/modules";
-// eslint-disable-next-line react/prop-types
+import PropTypes from "prop-types";
 export default function MyHomeSlider({ heading, title, overLayColor, showBtn, sliderImg1, sliderImg2 }) {
     return (
         <div className="slider__handler">
@@ -92,3 +92,11 @@ export default function MyHomeSlider({ heading, title, overLayColor, showBtn, sl
         </div>
     )
 }
+MyHomeSlider.propTypes = {
+    heading: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    overLayColor: PropTypes.string,
+    showBtn: PropTypes.bool,
+    sliderImg1: PropTypes.string.isRequired,
+    sliderImg2: PropTypes.string.isRequired,
+};

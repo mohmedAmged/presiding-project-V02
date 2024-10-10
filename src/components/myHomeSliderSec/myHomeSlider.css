@@ -23,12 +23,13 @@
 .slideItem__info p{
     font-size: 16px;
     font-weight: 400;
+    letter-spacing: 3px;
     margin-bottom: 10px;
-    text-transform: capitalize;
+    text-transform: uppercase;
     color: var(--primary-white);
 }
 .slideItem__info h2{
-    font-size: 48px;
+    font-size: 45px;
     font-weight: bold;
     text-transform: capitalize;
     color: var(--primary-white);

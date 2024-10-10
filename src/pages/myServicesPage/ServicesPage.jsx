@@ -7,5 +7,5 @@ export default function ServicesPage() {
             <MyHomeSlider heading={'Our Services'} title={''} overLayColor={'#00000057'} showBtn={false} sliderImg1={sliderImg1} sliderImg2={sliderImg1} />
             <MyServicesCards />
         </>
-    )
-}
+    );
+};

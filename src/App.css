@@ -2,3 +2,19 @@
 
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
+.error_input {
+    border-color: #ff2020 !important;
+}
+.error_message {
+    color: #ff2020;
+    font-size: 11px;
+}
+.section__handler {
+    padding: 70px 0;
+}
+.container {
+    max-width: 90% !important;
+}
+.sectionBgLight {
+    background-color: #eee;
+}

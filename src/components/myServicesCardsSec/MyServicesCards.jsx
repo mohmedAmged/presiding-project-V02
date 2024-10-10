@@ -80,7 +80,8 @@ export default function MyServicesCards() {
                 }
             ],
         }
-    ]
+    ];
+
     return (
         <div className={`${styles.myServicesCards__handler}`}>
             <div className="container">
@@ -96,5 +97,6 @@ export default function MyServicesCards() {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
+
