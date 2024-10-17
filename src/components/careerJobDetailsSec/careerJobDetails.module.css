@@ -1,0 +1,38 @@
+.careerJobDetails_handler{
+    margin: 60px 0;
+}
+.JobDetails_action{
+   text-align: end;
+}
+.applayBtn{
+    width: 8rem;
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    transition: all .3s ease-in-out;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--main-green-color);
+    color: var(--primary-white);
+    border: 1px solid var(--main-green-color);
+    cursor: pointer;
+}
+.applayBtn:hover{
+    background-color: var(--primary-white);
+    color: var(--main-green-color);
+}
+.JobDetails_singleInfo{
+    margin-bottom: 40px;
+}
+.JobDetails_singleInfo h3{
+    font-size: 42px;
+    font-weight: 500;
+    text-transform: capitalize;
+    color: var(--main-blue-color-text);
+}
+.JobDetails_singleInfo p{
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--primary-black);
+}

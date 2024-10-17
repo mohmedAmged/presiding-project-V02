@@ -1,0 +1,32 @@
+.heroImage__handler{
+    background-image: url('../../assets/insightsPage/bg-careers.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 40px 0;
+    height: 50vh;
+    position: relative;
+}
+.overlay{
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.365);
+}
+.heroImage__text{
+    position: absolute;
+    bottom: 40px;
+    z-index: 12;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.heroImage__text h2{
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: capitalize;
+}
