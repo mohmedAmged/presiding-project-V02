@@ -16,7 +16,7 @@ export default function SingleCareer() {
     useEffect(()=>{
         const getSingleJob = async () => {
             try {
-                const response = await axios.post(`${baseUrl}/get-job?t=${new Date().getTime()}`,{
+                const response = await axios.post(`${baseUrl}/get-job`,{
                     job_id: JobId,
                 } ,{
                     headers: {

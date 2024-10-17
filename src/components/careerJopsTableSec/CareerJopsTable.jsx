@@ -4,7 +4,7 @@ import { useFetch } from '../../hooks/useFetch';
 import styles from './careerJopsTable.module.css'
 import { NavLink } from 'react-router-dom';
 export default function CareerJopsTable() {
-    const [currData] = useFetch(`${baseUrl}/all-jobs?t=${new Date().getTime()}`);
+    const [currData] = useFetch(`${baseUrl}/all-jobs`);
     console.log(currData);
     
   return (
