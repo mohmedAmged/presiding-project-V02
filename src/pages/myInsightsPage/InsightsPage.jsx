@@ -1,22 +1,21 @@
-import MyHomeSlider from '../../components/myHomeSliderSec/MyHomeSlider';
-import sliderImg1 from '../../assets/insightsPage/8be20325d2160343393bf6f345b1b8fb.jpeg';
-import MyInsightsFiltersBar from '../../components/myInsightsFiltersBar/MyInsightsFiltersBar';
-import FeaturedInsightsSec from '../../components/featuredInsightsSec/FeaturedInsightsSec';
 import AllInsightsSec from '../../components/allInsightsSec/AllInsightsSec';
-import { useState } from 'react';
+import bgImage from '../../assets/home-overview/a.jpg';
+import MyHeroImage from '../../components/myHeroImageSec/MyHeroImage';
+import { baseUrl } from '../../functions/baseUrl';
+import { useFetch } from '../../hooks/useFetch';
+import MyLoader from '../../components/myLoaderSec/MyLoader';
 
 export default function InsightsPage() {
-    const [filter,setFilter] = useState({
-        blog_category_id: '',
-        industry_id: '',
-    });
+    const [currData, loading] = useFetch(`${baseUrl}/all-blogs`);
+
+    if (loading) {
+        return <MyLoader />;
+    };
 
     return (
         <>
-            <MyHomeSlider heading={'Explore Market Insights & Reports'} title={'Presiding Insights'} overLayColor={'#00000057'} sliderImg1={sliderImg1} />
-            <MyInsightsFiltersBar setFilter={setFilter} filter={filter} />
-            <FeaturedInsightsSec isSingleInsight={false} />
-            <AllInsightsSec />
+            <MyHeroImage title={`Business Insights`} subTit={'Explore Market Insights & Reports'} bgImage={bgImage} />
+            <AllInsightsSec currData={currData}/>
         </>
     );
 };

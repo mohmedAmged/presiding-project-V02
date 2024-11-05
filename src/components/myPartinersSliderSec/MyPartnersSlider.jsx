@@ -17,7 +17,7 @@ export default function MyPartnersSlider() {
                         className='mySwiper'
                         modules={[Autoplay]}
                         autoplay={{
-                            delay: 2500,
+                            delay: 4500,
                             pauseOnMouseEnter: true,
                             disableOnInteraction: false
                         }}

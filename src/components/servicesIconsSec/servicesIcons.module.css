@@ -1,0 +1,42 @@
+.servicesIcons__handler {
+    padding: 40px 0;
+    background: var(--main-blue-color-bg);
+    color: #ffffff;
+}
+.iconContainer {
+    padding-inline-end: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
+.textContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.servicesIcons__handler .textContainer p {
+    font-size: 12px;
+}
+@media (max-width: 1024px) {
+    .iconContainer {
+        padding-inline-end: 10px;
+        font-size: 35px;
+    }
+}
+@media (max-width: 991px) {
+    .gridContainerItem {
+        width: calc(100% / 3) !important;
+    }
+}
+@media (max-width: 768px) {
+    .iconContainer {
+        font-size: 25px;
+    }
+    .gridContainerItem{
+        width: 100% !important;
+    }
+    .gridContainerItem:not(:last-child){
+        margin-bottom: 20px;
+    }
+}

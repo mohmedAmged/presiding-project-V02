@@ -1,3 +1,14 @@
 .myServicesCards__handler{
-    margin: 100px 0;
+    background: linear-gradient(270deg,var(--main-blue-color-bg),  rgb(3, 11, 30));
+}
+.myServicesCards__handler h3 ,
+.myServicesCards__handler h5 ,
+.myServicesCards__handler li ,
+.myServicesCards__handler p {
+    color: #ffffff !important;
+}
+@media (max-width: 767px) {
+    .myServicesCards__handler {
+        background: #ffffff !important;
+    };
 }

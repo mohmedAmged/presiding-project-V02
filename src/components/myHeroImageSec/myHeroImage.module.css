@@ -4,8 +4,10 @@
     background-position: center;
     background-size: cover;
     padding: 40px 0;
-    height: 50vh;
+    height: 60vh;
     position: relative;
+    display: flex;
+    align-items: end;
 }
 .overlay{
     position: absolute;
@@ -14,19 +16,96 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.365);
+    /* background: ; */
 }
 .heroImage__text{
-    position: absolute;
-    bottom: 40px;
+    position: relative;
     z-index: 12;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+
 }
 .heroImage__text h2{
     font-size: 48px;
     font-weight: bold;
     color: #fff;
     text-transform: capitalize;
+    margin-top: 40px;
+}
+.heroImage__text p{
+    max-width: 750px;
+    font-size: 24px;
+    font-weight: 400;
+    color: #fff;
+    text-transform: capitalize;
+    margin-top: 15px;
+}
+.heroImage__actions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+.heroImage__actions button{
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 15px;
+    text-transform: capitalize;
+    font-size: 16px;
+    transition: all .3s ease-in-out;
+}
+.heroImage__actions button:hover{
+    background: #fff;
+    color: #000;
+}
+.heroImage__actions h5{
+    color: #fff;
+    font-size: 24px;
+    text-transform: capitalize;
+    text-decoration: underline;
+    font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+    .heroImage__handler {
+        height: 60vh !important;
+    }
+}
+@media (max-width: 991px) {
+    .heroImage__text h2{ 
+        font-size: 30px;
+    }
+    .heroImage__text p{
+        font-size: 16px;
+    }
+    .heroImage__actions button{
+        font-size: 14px;
+    }
+    .heroImage__actions h5{
+        font-size: 16px;
+    }
+}
+@media (max-width: 768px) {
+    .heroImage__handler {
+        height: 40vh !important;
+    }
+    .heroImage__text h2{ 
+        font-size: 25px;
+    }
+    .heroImage__text p{
+        font-size: 15px;
+    }
+    .heroImage__actions button{
+        font-size: 13px;
+    }
+    .heroImage__actions h5{
+        font-size: 14px;
+    }
+}
+@media (max-width: 600px) {
+    .heroImage__text h2{ 
+        font-size: 20px;
+    }
+    .heroImage__text p{
+        font-size: 14px;
+    }
 }

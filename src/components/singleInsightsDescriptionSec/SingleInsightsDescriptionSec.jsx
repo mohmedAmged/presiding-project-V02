@@ -10,9 +10,8 @@ export default function SingleInsightsDescriptionSec({ head, disc }) {
                         <h2>
                             {head ? head : ''}
                         </h2>
-                        <p>
-                            {disc ? disc : ''}
-                        </p>
+                        <div dangerouslySetInnerHTML={{ __html: disc }}>
+                        </div>
                     </div>
                 </div>
             </div>

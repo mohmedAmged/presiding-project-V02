@@ -1,42 +1,32 @@
 import { useParams } from "react-router-dom";
 import MyHeroImage from "../../components/myHeroImageSec/MyHeroImage";
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { baseUrl } from "../../functions/baseUrl";
 import CareerJobDetails from "../../components/careerJobDetailsSec/CareerJobDetails";
+import { postDataToApi } from "../../functions/postDataToApi";
+import MyLoader from "../../components/myLoaderSec/MyLoader";
+import bgImage from '../../assets/home-overview/9ed0b317c009431f96f7364d813c33b8.jpeg';
 
 export default function SingleCareer() {
-    const {JobId} = useParams()
+    const { JobId } = useParams();
     const [job, setJob] = useState([]);
-    // eslint-disable-next-line no-unused-vars
+    const [loading, setLoading] = useState(false);
     const [error, setError] = useState([]);
-    console.log(JobId);
 
+    useEffect(() => {
+        postDataToApi(`${baseUrl}/get-job`, { job_id: JobId }, setJob, setError, setLoading);
+    }, [JobId]);
 
-    useEffect(()=>{
-        const getSingleJob = async () => {
-            try {
-                const response = await axios.post(`${baseUrl}/get-job`,{
-                    job_id: JobId,
-                } ,{
-                    headers: {
-                        "Content-Type": 'application/json',
-                        Accept: 'application/json',
-                    }
-                });
-                setJob(response?.data?.data?.job)
-                
-            } catch (error) {
-                setError(error?.response?.data?.message);
-            
-            };
-        };
-        getSingleJob()
-    },[setJob])    
-  return (
-    <>
-    <MyHeroImage title={`${job?.title} job Details`} />
-    <CareerJobDetails jobDetails={job}/>
-    </>
-  )
-}
+    if (loading) {
+        return <MyLoader />;
+    };
+
+    if (error) { '' };
+
+    return (
+        <>
+            <MyHeroImage bgImage={bgImage} title={`${job?.job?.title}`} subTit={`${job?.job?.country}, ${job?.job?.city}`} actions={true} btnName={'Apply Now'} btnNavigation={`/careers/apply/${JobId}`} linkName={'View other openings'} linkDistenation={'/careers'} />
+            <CareerJobDetails jobDetails={job?.job} />
+        </>
+    );
+};

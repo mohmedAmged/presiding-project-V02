@@ -1,8 +1,8 @@
 .myHomeTextInfo__handler{
-    margin-top: 30px;
+    margin-top: 60px;
 }
 .myTextItem__content .text_quote{
-    padding: 60px 0 20px 0;
+    padding: 45px 0 20px 0;
     padding-inline-start: 80px;
     border-inline-start: 1px solid var(--main-blue-color-bg);
 }
@@ -24,4 +24,12 @@
 }
 .myTextItem__content .text_sign p span{
     font-weight: normal;
+}
+@media (max-width: 768px) {
+    .myTextItem__content .text_quote h5{
+        font-size: 25px;
+    }
+    .myTextItem__content .text_sign p{
+        font-size: 15px;
+    }
 }

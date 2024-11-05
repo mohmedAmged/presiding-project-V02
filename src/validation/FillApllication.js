@@ -11,7 +11,7 @@ export const FillApplicationFormShema = z.object({
     phone: z.string().min(1,{message: 'Phone is Required'}),
     year_exp_id: z.string().min(1,{message: 'Required'}),
     primary_expertise_id: z.string().min(1,{message: 'Required'}),
-    availability_id: z.string().min(1,{message: 'Required'}),
+    availability_id: z.any(),
     willingness_to_travel: z.string().min(1,{message: 'Required'}),
     linkedin_profile: z.string().min(1,{message: 'Required'}),
     skills_id: z.any(),
@@ -19,7 +19,6 @@ export const FillApplicationFormShema = z.object({
     project_type_id: z.any(),
     languages_id: z.any(),
     attachment: z.any(),
-    publication: z.any(),
     portfolio_file: z.any(),
     portfolio_link: z.any(),
 });

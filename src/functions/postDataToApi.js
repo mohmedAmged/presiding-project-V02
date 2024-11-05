@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const postDataToApi = async (url,data,setData, setToastMessage,setLoading) => {
+export const postDataToApi = async (url,data,setRes,setToastMessage,setLoading) => {
     try {
         setLoading(true);
         const response = await axios.post(url, data,{
@@ -9,7 +9,7 @@ export const postDataToApi = async (url,data,setData, setToastMessage,setLoading
                 Accept: 'application/json',
             }
         });
-        setData(response?.data?.data)
+        setRes(response?.data?.data);
         setToastMessage(response?.data?.message);
     } catch (error) {
         setToastMessage(error?.response?.data?.message);
