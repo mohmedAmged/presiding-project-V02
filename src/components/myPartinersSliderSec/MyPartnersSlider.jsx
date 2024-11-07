@@ -5,6 +5,7 @@ import "swiper/css/autoplay";
 import Autoplay from "../../../node_modules/swiper/modules/autoplay.mjs";
 import { baseUrl } from "../../functions/baseUrl";
 import { useFetch } from "../../hooks/useFetch";
+import MyMainHeader from "../myMainHeaderSec/MyMainHeader";
 
 export default function MyPartnersSlider() {
     const [currData] = useFetch(`${baseUrl}/parteners`);
@@ -12,6 +13,12 @@ export default function MyPartnersSlider() {
     return (
         <div className="myPartener__slider__handler">
             <div className="row myPartener__slider">
+            <div className="col-12 headingColumn mb-4">
+                    <MyMainHeader
+                        secHead=''
+                        secText='Our Clients'
+                    />
+                </div>
                 <div className="col-12">
                     <Swiper
                         className='mySwiper'
